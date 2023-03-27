@@ -9,9 +9,16 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'cv',
+    path: 'about',
     loadChildren: () =>
-      import('./modules/cv/cv.module').then((m) => m.CvModule),
+      import('./modules/about/about.module').then((m) => m.AboutModule),
+  },
+  {
+    path: 'portfolio',
+    loadChildren: () =>
+      import('./modules/portfolio/portfolio.module').then(
+        (m) => m.PortfolioModule
+      ),
   },
   {
     path: 'contact-us',
